@@ -1,0 +1,39 @@
+[package]
+name = "game_kernel"
+version = "0.1.0"
+authors = ["Caleb <farmingtoncardinals24@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+ghost_hunter = {git = "https://github.com/gjf2a/ghost_hunter"}
+bare_metal_tracer = {git = "https://github.com/gjf2a/bare_metal_tracer"}
+pluggable_interrupt_template = {git = "https://github.com/gjf2a/pluggable_interrupt_template"}
+baremetal_game = {git = "https://github.com/scgaskins/baremetal_game"}
+chicken_invaders = {git = "https://github.com/juliebdick/chicken_invaders"}
+nom_noms = {git = "https://github.com/cally-cmd/nom_noms"}
+baremetal_snake = {git = "https://github.com/Haedge/baremetal_snake"}
+
+bootloader = "0.9.8"
+volatile = "0.2.6"
+spin = "0.5.2"
+x86_64 = "0.12.1"
+uart_16550 = "0.2.0"
+pic8259_simple = "0.2.0"
+pc-keyboard = "0.5.0"
+#pluggable_interrupt_os = "0.2.0"
+pluggable_interrupt_os = {git = "https://github.com/gjf2a/pluggable_interrupt_os"}
+bare_metal_modulo = "0.7.0"
+
+[dependencies.num]
+version = "0.3"
+default-features = false
+
+[dependencies.lazy_static]
+version = "1.0"
+features = ["spin_no_std"]
+
+[dependencies.crossbeam]
+version = "0.8"
+default-features = false
